@@ -13,7 +13,7 @@
     "dev": "tsx src/index.ts"
   },
   "dependencies": {
-    "commander": "^12.1.0",
+    "commander": "^14.0.0",
     "dotenv": "^16.4.5",
     "fast-xml-parser": "^4.3.6",
     "pino": "^9.3.2",
