@@ -1,0 +1,30 @@
+{
+  "name": "bookmarks-organiser",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI to parse XBEL bookmarks, de-duplicate, and auto-categorize via OpenAI",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --enable-source-maps dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "fast-xml-parser": "^4.3.6",
+    "pino": "^9.3.2",
+    "openai": "^5.12.2",
+    "p-limit": "^5.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "tslib": "^2.8.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
