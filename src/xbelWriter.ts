@@ -44,5 +44,9 @@ export function buildXbel(items: XbelItem[], allCategories?: string[]): string {
     format: true,
     indentBy: '  ',
   });
-  return builder.build(xbelObject);
+  const xmlBody = builder.build(xbelObject);
+  const header =
+    '<?xml version="1.0" encoding="UTF-8"?>\n' +
+    '<!DOCTYPE xbel PUBLIC "+//IDN python.org//DTD XML Bookmark Exchange Language 1.0//EN//XML" "http://pyxml.sourceforge.net/topics/dtds/xbel.dtd">\n';
+  return header + xmlBody;
 }
