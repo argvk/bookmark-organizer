@@ -29,6 +29,9 @@ USER app
 # Expect OPENAI_API_KEY at runtime
 ENV OPENAI_MODEL=gpt-4o-mini
 
+ENV NODE_OPTIONS="--import ./dist/instrument.js"
+ENV NODE_ENV="production"
+
 ENTRYPOINT ["node", "dist/index.js"]
 # usage example:
 # docker run --rm -e OPENAI_API_KEY=sk-... -v $(pwd):/data IMAGE --input /data/bookmarks.xbel --out /data/result.xbel --folders "Work,Personal"
